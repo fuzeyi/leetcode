@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6223d75-42f8-49ad-9d80-c8c17d26072d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fzy/leetcode/algorithms/problem448/FindAllNumbersDisappear.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fzy/leetcode/algorithms/problem463/IslandPerimeter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
