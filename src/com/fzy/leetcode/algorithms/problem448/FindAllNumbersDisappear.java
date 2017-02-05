@@ -12,14 +12,19 @@ public class FindAllNumbersDisappear {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         int length = nums.length;
         List<Integer> list = new ArrayList<>();
-        for (int i = 1; i <= length; i++) {
-            list.add(i);
-        }
-        for (int j = 0; j < length; j++) {
-            if (list.contains(nums[j])) {
-                list.remove(new Integer(nums[j]));
+        for (int i = 0; i < length; i++) {
+            int a = Math.abs(nums[i]) - 1;
+            if (nums[a] > 0) {
+                nums[a] = -nums[a];
             }
         }
+        for (int j = 0; j < length; j++) {
+            if (nums[j] > 0) {
+                list.add(j + 1);
+            }
+        }
+
+
         return list;
     }
 
