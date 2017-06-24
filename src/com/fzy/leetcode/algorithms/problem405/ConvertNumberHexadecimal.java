@@ -4,36 +4,18 @@ package com.fzy.leetcode.algorithms.problem405;
  * Created by fuzeyi on 2017/5/25.
  */
 public class ConvertNumberHexadecimal {
+    char[] map = {'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};
+
     public String toHex(int num) {
-
-        String sb = new String();
-        int temp = num;
-        while (temp != 0) {
-            sb =getHexChar(temp%16) +sb;
-            temp /= 16;
+        if(num == 0) return "0";
+        String result = "";
+        while(num != 0){
+            result = map[(num & 15)] + result;
+            num = (num >>> 4);
         }
-
-        return  "0x"+sb;
+        return result;
     }
 
-    public String getHexChar(int num) {
-        if (num < 10) {
-            return String.valueOf(num);
-        } else if (num == 10) {
-            return "a";
-        } else if (num == 11) {
-            return "b";
-        } else if (num == 12) {
-            return "c";
-        } else if (num == 13) {
-            return "d";
-        } else if (num == 14) {
-            return "e";
-        } else if (num == 15) {
-            return "f";
-        }
-        return null;
-    }
 
     public static void main(String[] args) {
         int num = 18;
